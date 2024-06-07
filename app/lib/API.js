@@ -2,7 +2,6 @@ import axios from "axios";
 
 export default async function fetchData() {
     const { data } = await axios(`https://valorant-api.com/v1/agents?language=es-MX`);
-    console.log(data.data);
     return data.data
 }
 
