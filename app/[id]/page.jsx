@@ -4,7 +4,7 @@ import { fetchDataId } from "../lib/API"
 
 export default async function Detail({ params }) {
     const agent = await fetchDataId(params.id)
-    console.log('este es el link:', agent);
+    
     return (
         <div>
             <h1>El id del agente es: {agent.uuid}</h1>
