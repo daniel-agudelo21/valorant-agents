@@ -31,7 +31,7 @@ export default function NavBar() {
         <div className="ml-5 mt-8">
             <Image src={`/valorant.svg`} width={51} height={51} />
         </div>
-            <nav className="fixed bottom-0 left-0 right-0 z-50 flex flex-row  md:hidden mx-auto bg-[#222121] py-4 justify-evenly items-center">
+            <nav className="fixed bottom-0 left-0 right-0 z-50 flex flex-row  md:hidden mx-auto bg-[#222121] py-4 pt-6 rounded-tl-[30px] rounded-tr-[30px] justify-evenly items-center">
                 {
                     links.map((link) => {
                         const LinkIcon = link.icon
