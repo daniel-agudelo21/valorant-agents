@@ -4,6 +4,11 @@ import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
 const roles = [
     {
+        uuid: '',
+        name: 'Todos',
+        icon: '/iniciador.svg'
+    },
+    {
         uuid: '1b47567f-8f7b-444b-aae3-b0c634622d10',
         name: 'Iniciador',
         icon: '/iniciador.svg'
@@ -29,15 +34,15 @@ const roles = [
 export default function Filter() {
     const searchParams = useSearchParams()
     const pathname = usePathname()
-    const {replace} = useRouter()
+    const { replace } = useRouter()
 
     const handleFilter = (uuid) => {
         const params = new URLSearchParams(searchParams)
         const currentFilter = params.get('role')
         if (currentFilter === uuid) {
             params.delete('role')
-        }else{
-            params.set('role',uuid)
+        } else {
+            params.set('role', uuid)
         }
         replace(`${pathname}?${params.toString()}`)
         console.log(uuid);
@@ -51,10 +56,10 @@ export default function Filter() {
                 roles.map((role) => (
                     <div key={role.uuid}>
                         <p>{role.name}</p>
-                        <button 
-                        onClick={()=> {handleFilter(role.uuid)}}
-                        className={`border rounded-lg p-2 hover:bg-[#F53C43] hover:scale-110 hover:transition-all ${currentFilter === role.uuid ? 'bg-[#F53C43]' : ''
-                                    }`}>
+                        <button
+                            onClick={() => { handleFilter(role.uuid) }}
+                            className={`border rounded-lg p-2 hover:bg-[#F53C43] hover:scale-110 hover:transition-all ${currentFilter === role.uuid || (role.uuid === '' && !currentFilter) ? 'bg-[#F53C43]' : ''
+                                }`}>
                             <Image src={role.icon} width={51} height={51}
 
                             />
