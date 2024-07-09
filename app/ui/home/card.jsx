@@ -31,10 +31,10 @@ export default function Card({ id, name, image, role, color }) {
                     fill={true}
                     loading="lazy"
                     style={{ objectFit: "cover" }}
-                    className="absolute -mt-6 z-20 " />
-                <div className="absolute bg-gradient-to-t from-black to-transparent opacity-90 z-30  h-20 w-44 bottom-[19px] rounded-xl"></div>
-                <h1 className="absolute bottom-8 left-4 text-white text-lg font-bold z-40">{nameUpper}</h1>
-                <img src={role.displayIcon} alt={role.displayName} width={38} className="absolute top-8 right-4 z-10" />
+                    className="absolute -mt-6 z-20 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.5)]" />
+                
+                <h1 className="absolute bottom-8 left-4 text-white text-lg font-bold z-40 drop-shadow-[4px_4px_2px_rgba(0,0,0,1)]">{nameUpper}</h1>
+                <img src={role.displayIcon} alt={role.displayName} width={38} className="absolute top-8 right-4 z-10 drop-shadow-[4px_4px_2px_rgba(0,0,0,1)]" />
             </div>
         </article>
     );
