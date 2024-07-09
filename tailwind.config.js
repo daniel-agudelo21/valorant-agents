@@ -4,6 +4,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "public/*.{html,js}",
   ],
   theme: {
     extend: {
@@ -11,6 +12,12 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      screens: {
+        '2lg': '1440px'
+      },
+      fontFamily: {
+        cyber: ["cyber", "system-ui"]
+      }
     },
   },
   plugins: [],
