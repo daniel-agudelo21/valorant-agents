@@ -8,7 +8,7 @@ export default function Card({ id, name, image, role, color }) {
     return (
         <article
             key={id}
-            className="m-2 w-44 h-[286px] hover:scale-110 relative transition ease-in-out delay-100"
+            className="m-2 w-36 h-[240px] lg:w-44 lg:h-[286px] hover:scale-110 relative transition ease-in-out delay-100 "
         >
             <svg
                 className="absolute w-full h-full bottom-0"
@@ -33,8 +33,8 @@ export default function Card({ id, name, image, role, color }) {
                     style={{ objectFit: "cover" }}
                     className="absolute -mt-6 z-20 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.5)]" />
                 
-                <h1 className="absolute bottom-8 left-4 text-white text-lg font-bold z-40 drop-shadow-[4px_4px_2px_rgba(0,0,0,1)]">{nameUpper}</h1>
-                <img src={role.displayIcon} alt={role.displayName} width={38} className="absolute top-8 right-4 z-10 drop-shadow-[4px_4px_2px_rgba(0,0,0,1)]" />
+                <h1 className="absolute bottom-14 text-[12px] lg:text-base left-4  font-val z-40 drop-shadow-[0px_4px_2px_rgba(0,0,0,0.6)]">{nameUpper}</h1>
+                <img src={role.displayIcon} alt={role.displayName}  className="absolute top-8 right-4 z-10 w-6 lg:w-[38px] drop-shadow-[4px_4px_2px_rgba(0,0,0,1)]" />
             </div>
         </article>
     );
