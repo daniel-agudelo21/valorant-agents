@@ -10,7 +10,7 @@ export const metadata = {
     template: '%s | Valorant',
     default: 'Agentes de Valorant'
   },
-  description: "Agentes del juego Valorant de RIOT GAMES",
+  description: "Información general de los agentes del juego Valorant de RIOT GAMES",
   metadataBase: new URL('https://valorant-agents-mauve.vercel.app/')
 };
 
