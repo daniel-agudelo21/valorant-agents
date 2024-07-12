@@ -70,7 +70,7 @@ export default function Filter() {
                                 onClick={() => { handleFilter(role.uuid) }}
                                 className={`rounded-lg p-2 hover:bg-[#F53C43] hover:scale-110 hover:transition-all drop-shadow-[5px_2px_2px_rgba(0,0,0,1)] ${currentFilter === role.uuid || (role.uuid === '' && !currentFilter) ? 'bg-[#F53C43]' : ''
                                     }`}>
-                                <Image src={role.icon} width={40} height={40}
+                                <Image src={role.icon} width={40} height={40} alt={role.name} name={role.name}
                                     className="2lg:size-12 drop-shadow-[5px_2px_2px_rgba(0,0,0,1)]"
                                 />
                             </button>
