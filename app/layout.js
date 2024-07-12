@@ -11,7 +11,7 @@ export const metadata = {
     default: 'Agentes de Valorant'
   },
   description: "Agentes del juego Valorant de RIOT GAMES",
-  metadataBase: new URL('https://playvalorant.com/en-us/media/')
+  metadataBase: new URL('https://valorant-agents-mauve.vercel.app/')
 };
 
 export default function RootLayout({ children }) {
