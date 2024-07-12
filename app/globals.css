@@ -7,4 +7,11 @@
     src: url('/cyber.OTF') format('opentype');
     font-weight: normal;
     font-style: normal;
-  }
+}
+
+@font-face {
+  font-family: 'Val';
+  src: url('/2ZO.TTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
