@@ -27,14 +27,11 @@ export default function Card({ id, name, image, role, color }) {
                 />
             </svg>
             <div className='relative z-10 size-full'>
-                <Image src={image} alt={name}
+                <Image src={image} alt="imagen del personaje"
                     fill={true}
-                    loading="lazy"
-                    style={{ objectFit: "cover" }}
-                    className="absolute -mt-6 z-20 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.5)]" />
-                
-                <h1 className="absolute bottom-14 text-[12px] lg:text-base left-4  font-val z-40 drop-shadow-[0px_4px_2px_rgba(0,0,0,0.6)]">{nameUpper}</h1>
-                <img src={role.displayIcon} alt={role.displayName}  className="absolute top-8 right-4 z-10 w-6 lg:w-[38px] drop-shadow-[4px_4px_2px_rgba(0,0,0,1)]" />
+                    className="absolute -mt-6 z-20 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.5)] object-cover" />
+                <h1 className="absolute bottom-14 text-[12px] lg:text-lg left-4  font-val z-40 drop-shadow-[0px_4px_2px_rgba(0,0,0,0.6)]">{nameUpper}</h1>
+                <Image src={role.displayIcon} alt={role.displayName} width={24} height={24}  className="absolute top-8 right-4 z-10 w-6 lg:w-[38px] drop-shadow-[4px_4px_2px_rgba(0,0,0,1)]" />
             </div>
         </article>
     );
