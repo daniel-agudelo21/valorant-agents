@@ -1,6 +1,7 @@
 "use client"
 import { useState } from 'react';
 import { outfit } from '../fonts';
+import Image from 'next/image';
 
 export default function Abilities({ agent }) {
     const [selectedAbility, setSelectedAbility] = useState(agent.abilities[0]);
@@ -18,18 +19,23 @@ export default function Abilities({ agent }) {
                     {agent.abilities.map((ability) => (
                         <button
                             key={ability.slot}
+                            name={ability.displayName}
                             className=' rounded-lg p-1 z-40 drop-shadow-[5px_2px_2px_rgba(0,0,0,1)]'
                             style={selectedAbility === ability ? { backgroundColor: bgColor } : {}}
                             onClick={() => handleAbility(ability)}
                         >
-                            <img src={ability.displayIcon} alt={ability.displayName} width={62}  className='drop-shadow-[5px_2px_2px_rgba(0,0,0,1)]'/>
+                            {
+                                ability.displayIcon && (
+                                    <Image src={ability.displayIcon} alt={ability.displayName} width={62} height={62} className='drop-shadow-[5px_2px_2px_rgba(0,0,0,1)]' />
+                                )
+                            }
                         </button>
                     ))}
                 </div>
                 {/* Descripcion habilidad */}
                 {selectedAbility && (
                     <div className="mt-8  z-30 drop-shadow-[5px_2px_2px_rgba(0,0,0,1)] md:min-h-[240px] ">
-                        <h3 className={` ${outfit.className} md:text-2xl font-bold`} style={{ color: bgColor }}>{selectedAbility.displayName}</h3>
+                        <h3 className={` ${outfit.className} md:text-2xl font-bold backdrop-contrast-200`} style={{ color: bgColor }}>{selectedAbility.displayName}</h3>
                         <p className='mt-2 text-[10px] md:text-base'>{selectedAbility.description}</p>
                     </div>
                 )}
