@@ -8,15 +8,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      
       screens: {
-        '2lg': '1440px'
+        "2lg": "1440px",
+        "3xl": "1680px",
+        "4xl": "2048px"
       },
       fontFamily: {
-        cyber: ["cyber", "system-ui"]
+        cyber: ["cyber", "system-ui"],
+        val: ["Val","system-ui"]
       }
     },
   },
