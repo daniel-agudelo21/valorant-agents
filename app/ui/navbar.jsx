@@ -51,7 +51,7 @@ export default function NavBar() {
                     <div className="flex items-center">
                         <Image src={`/valorant.svg`} width={71} height={71} className="drop-shadow-[0_2px_2px_rgba(0,0,0,1)]" />
                     </div>
-                    <div className="flex-1 flex justify-center gap-x-4">
+                    <div className="flex-1 flex justify-center gap-x-4 -ml-20">
                         {links.map((link) => (
                             <Link
                                 key={link.name}
