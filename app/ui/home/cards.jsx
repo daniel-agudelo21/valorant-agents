@@ -16,7 +16,7 @@ export default function Cards({ playableAgents, query, filterRole }) {
         <div className="grid grid-cols-2 mx-auto md:grid-cols-4 xl:grid-cols-6 md:space-x-2 md:mt-16">
             {
                 filteredAgents.map(({ uuid, displayName, fullPortrait, role, backgroundGradientColors }) => (
-                    <Link href={`/${uuid}`} key={uuid}>
+                    <Link href={`/agente/${uuid}`} key={uuid}>
                         <Card
                             id={uuid}
                             name={displayName}
