@@ -1,7 +1,9 @@
+import WorkingOn from "../ui/workingon";
+
 export default function Mapas(){
     return(
         <h1>
-            Mapas
+            <WorkingOn/>
         </h1>
     )
 }

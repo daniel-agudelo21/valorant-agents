@@ -1,7 +1,9 @@
+import WorkingOn from "../ui/workingon";
+
 export default function Skins() {
     return (
         <h1>
-            Skins
+            <WorkingOn/>
         </h1>
     )
 }
