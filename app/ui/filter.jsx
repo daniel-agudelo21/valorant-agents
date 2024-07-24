@@ -59,7 +59,6 @@ export default function Filter() {
         const rol = roles.find((role) => role.uuid === currentFilter)
         setSelectedRoleName(rol ? rol.name : 'Todos')
     }, [currentFilter])
-
     return (
         <div className="flex flex-col items-center">
             <div className="flex relative gap-x-2 md:gap-x-4 ">
@@ -68,6 +67,7 @@ export default function Filter() {
                         <div key={role.uuid}>
                             <button
                                 onClick={() => { handleFilter(role.uuid) }}
+                                disabled={currentFilter === role.uuid || (role.uuid === '' && !currentFilter)}
                                 className={`rounded-lg p-2 hover:bg-[#F53C43] hover:scale-110 hover:transition-all drop-shadow-[5px_2px_2px_rgba(0,0,0,1)] ${currentFilter === role.uuid || (role.uuid === '' && !currentFilter) ? 'bg-[#F53C43]' : ''
                                     }`}>
                                 <Image src={role.icon} width={40} height={40} alt={role.name} name={role.name}
