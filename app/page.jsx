@@ -5,7 +5,7 @@ import SearchBar from './ui/search';
 
 export default async function Home({ searchParams }) {
   const agents = await fetchData()
-  const filteredAgents = agents.filter((agent) => agent.isPlayableCharacter)
+  const playableAgents = agents.filter((agent) => agent.isPlayableCharacter)
 
   const query = searchParams?.query || ''
   const filterRole = searchParams?.role || ''
@@ -18,7 +18,7 @@ export default async function Home({ searchParams }) {
         <SearchBar placeholder='Buscar agente...' />
         <Filter />
       </div>
-      <Cards playableAgents={filteredAgents} query={query} filterRole={filterRole} />
+      <Cards playableAgents={playableAgents} query={query} filterRole={filterRole} />
     </main>
   );
 }
